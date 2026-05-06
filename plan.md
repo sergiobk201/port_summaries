@@ -9,7 +9,7 @@ Build a single-page HTML/CSS dashboard to summarize three distinct investment po
 - **Phase 3: Refinement & Assets**
 
 ## Roadmap
-- [ ] Define semantic HTML structure for the main container and three portfolio sections.
+- [x] Define semantic HTML structure for the main container and three portfolio sections.
 - [ ] Populate content with dummy data for Strategy, Risk, and Performance metrics.
 - [ ] Implement global CSS variables (colors, typography).
 - [ ] Create a responsive layout using CSS Grid for the portfolio cards.
