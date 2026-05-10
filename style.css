@@ -90,3 +90,79 @@ body {
   position: relative;
   overflow:hidden;
 }
+
+
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-2px)
+}
+
+.card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px
+}
+
+.card__header {
+  margin-bottom: 20px;
+}
+
+.card__type {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.card__name{
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.card__description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 16px 0;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--bg-tag);
+  color: var(--text-secondary);
+}
+
+.card__section {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 16px;
+  margin-top:16px;
+}
+
+.card__section:first-of-type {
+  margin-top:auto;
+}
+
+.card__section-title {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform:uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
