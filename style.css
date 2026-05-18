@@ -1,33 +1,38 @@
+/* 
+  Global Design System for the Portfolio Dashboard.
+  Implements a dark-mode Quant aesthetic using CSS Variables 
+  for maintainability and dynamic strategy-based accenting.
+*/
 :root {
---bg-primary: #0a0a0b;
---bg-card: #141416;
---bg-card-hover: #1a1a1e;
---bg-tag: #1e1e24;
---text-primary: #e8e6e3;
---text-secondary: #8a8880;
---text-muted: #5a5850;
---accent-blue: #4a9eff;
---accent-green: #34d399;
---accent-amber: #f59e0b;
---accent-rose: #f472b6;
---accent-purple: #a78bfa;
---border-subtle: #222228;
---border-hover: #333340;
---font-mono: 'DM Mono', monospace;
---font-serif: 'Source Serif 4', Georgia, serif;
---radius: 8px;
---transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --bg-primary: #0a0a0b;
+  --bg-card: #141416;
+  --bg-card-hover: #1a1a1e;
+  --bg-tag: #1e1e24;
+  --text-primary: #e8e6e3;
+  --text-secondary: #8a8880;
+  --text-muted: #5a5850;
+  --accent-blue: #4a9eff;
+  --accent-green: #34d399;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f472b6;
+  --accent-purple: #a78bfa;
+  --border-subtle: #222228;
+  --border-hover: #333340;
+  --font-mono: 'DM Mono', monospace;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --radius: 8px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 *, *::before, *::after {
-  box-sizing:border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono); /* Default to mono for data-heavy context */
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -54,7 +59,7 @@ body {
 }
 
 .header__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif); /* Serif used for high-level narrative hierarchy */
   font-size: clamp(32px, 5vw, 56px);
   font-weight: 600;
   line-height: 1.1;
@@ -66,36 +71,38 @@ body {
   font-family: var(--font-serif);
   font-size: 18px;
   color: var(--text-secondary);
-  max-width:600px;
+  max-width: 600px;
   line-height: 1.7;
   font-style: italic;
 }
 
+/* 
+  Flexible Grid Layout: 
+  Automatically balances card density based on viewport width.
+*/
 .grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(340px, 1fr));
-  gap:20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
   padding: 48px 0 80px;
 }
 
-
-.card{
+.card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius);
   padding: 28px;
   transition: background var(--transition), border-color var(--transition), transform var(--transition);
-  display:flex;
+  display: flex;
   flex-direction: column;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
 }
-
 
 .card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-hover);
-  transform: translateY(-2px)
+  transform: translateY(-2px);
 }
 
 .card__accent {
@@ -103,7 +110,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px
+  height: 2px;
 }
 
 .card__header {
@@ -118,7 +125,7 @@ body {
   margin-bottom: 8px;
 }
 
-.card__name{
+.card__name {
   font-family: var(--font-serif);
   font-size: 24px;
   font-weight: 600;
@@ -132,7 +139,6 @@ body {
   color: var(--text-secondary);
   line-height: 1.7;
 }
-
 
 .card__tags {
   display: flex;
@@ -152,17 +158,157 @@ body {
 .card__section {
   border-top: 1px solid var(--border-subtle);
   padding-top: 16px;
-  margin-top:16px;
+  margin-top: 16px;
 }
 
+/* Pushes the metrics/footer section to the bottom of the card for alignment */
 .card__section:first-of-type {
-  margin-top:auto;
+  margin-top: auto;
 }
 
 .card__section-title {
   font-size: 10px;
   letter-spacing: 2px;
-  text-transform:uppercase;
+  text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 10px;
+}
+
+.use-case-list {
+  list-style: none;
+}
+
+.use-case-list li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 3px 0;
+  padding-left: 18px;
+  position: relative;
+}
+
+.use-case-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pros-cons__list {
+  list-style: none;
+}
+
+.pros-cons__label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.pros-cons__label--pro {
+  color: var(--accent-green);
+}
+
+.pros-cons__label--con {
+  color: var(--accent-rose);
+}
+
+.pros-cons__list li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 2px 0;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.metric {
+  text-align: center;
+  padding: 10px 4px;
+  background: var(--bg-tag);
+  border-radius: 4px;
+}
+
+.metric__value {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.metric__label {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* 
+  Entrance Animations: 
+  Uses staggered delays to create a professional 'loading' feel.
+*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  opacity: 0;
+  animation: fadeUp 0.6s var(--transition) forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+.header {
+  animation: fadeUp 0.6s var(--transition) forwards;
+}
+
+/* Mobile responsive overrides */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 48px 0 36px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .pros-cons {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 32px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.footer a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }

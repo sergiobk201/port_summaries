@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## [2026-05-17] - Session: Project Finalization
+
+### Added
+- Completed the implementation of all three portfolio cards: **Vector Portfolio**, **Legend Portfolio**, and **Renda Portfolio**.
+- Integrated distinct investment strategies (Quant, Value, and Dividend) with tailored metrics (TWR, Risk Profile).
+- Implemented a fully responsive CSS Grid layout with interactive hover effects and entry animations (`fadeUp`).
+- Established a cohesive "Quant" dark-mode aesthetic using CSS variables and professional typography (Source Serif 4 & DM Mono).
+
+### Improved
+- Refined HTML semantics across all components for better structure and accessibility.
+- Optimized CSS for performance and maintainability using modular classes and variables.
+- Fixed critical syntax errors and structural issues in both HTML and CSS.
+
+### Major Lessons Learned Today
+- **Surgical Precision:** Small, targeted fixes in CSS (like correcting a comma to a space in `grid-template-columns`) can resolve layout-breaking issues immediately.
+- **Visual Polish:** CSS animations and transitions significantly elevate the user experience, making a static dashboard feel "alive" and professional.
+- **Documentation as Code:** Keeping the `CHANGELOG.md` and `plan.md` in sync with the actual implementation provides a clear roadmap of progress and ensures long-term maintainability.
+
 ## [2026-05-01] - Session: Project Initialization
 
 ### Added

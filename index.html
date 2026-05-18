@@ -1,9 +1,18 @@
-<!DOCTYPE>
+<!DOCTYPE html> 
+<!-- 
+  Single Page Application layout focusing on portfolio summary visualization.
+  Uses a grid-based architecture to display diverse investment strategies 
+  with a consistent 'Quant' aesthetic.
+-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8"
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Card Gallery - Sergio Barrientos</title>
+    <!-- 
+      Typography selection: Source Serif for narrative flow/headers, 
+      DM Mono for high-precision data/metrics.
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -11,6 +20,7 @@
   </head>
 
 <body>
+  <!-- Header section establishes the brand and purpose of the dashboard -->
   <header class="header">
       <div class="container">
         <p class="header__eyebrow">Portfolio Reference</p>
@@ -20,258 +30,234 @@
           underlying strategy, composition and details to make an informed decision on which
           portfolio to invest your money to.
         </p>
-        
       </div>
-    
   </header>
 
 <main>
  <div class="container">
+  <!-- Grid container handles responsive layout for varied strategy cards -->
   <div class="grid">
-          <!-- Here I will add my first portfolio; VECTOR portfolio -->
-    <article class="card" style="--delay:0.1s">
-    <div class="card__accent" style="background: var(--accent-blue)"></div>
-    <div class="header">
-      <p class="card__type">Quant Strategy</p>
-      <h2 class="card__name">Vector Portfolio</h2>
-      <p class="card__description">This portfolio has a focus on quant strategies that leverage ...</p>
 
-      <div class="card__tags">
-        <span class="tag">B3</span>
-        <span class="tag">NASDAQ</span>
-        <span class="tag">NYSE</span>
-        <span class="tag">Quantitative</span>
-      </div>
-    </div>
+    <!-- ====== CARD 1: Vector Portfolio (Quantitative Strategy) ====== -->
+    <article class="card" style="--delay: 0.1s">
+      <!-- Accent color defined per-card to visually distinguish strategies -->
+      <div class="card__accent" style="background: var(--accent-blue)"></div>
+      <div class="card__header">
+        <p class="card__type">Quant Strategy</p>
+        <h2 class="card__name">Vector Portfolio</h2>
+        <p class="card__description">This portfolio has a focus on quant strategies that leverage inherent market inefficiencies in Brazilian stock market.<br> 
+              The strategy has an average rebalancing period of 6 months with a universe of stocks focused on:</p>
 
-    <section class="card__section">
-      <p class="card__section-title">Use cases</p>
-      <ul>
-        <li>Automated trades</li>
-        <li>Programatic analysis</li>
-        <li>Proven track record</li>
-      </ul>
-
-    </section>
-
-    <section class="card__section">
-      <p class="card__section-title">Trade offs</p>
-      <div class="pros-cons">
-      <div>
-        <p class="pros-cons__label--pro">Strenghts</p>
-        <ul class="pros-cons__list">
-          <li>+ Item 1</li>
-          <li>+ Item 2</li>
-          <li>+ Item 3</li>
-        </ul>
-      </div>
-      <div>
-          <p class="pros-cons__label--con">Weaknesses</p>
-          <ul class="pros-cons__list">
-          <li>+ Item 1</li>
-          <li>+ Item 2</li>
-          <li>+ Item 3</li>
-          </ul>
-        </div>  
-      </div>
-      
-    </section>
-
-    <section class="card__section">
-      <p class="card__section-title">Typical metrics</p>
-      <div class="metrics">
-        <div class="metric">
-          <div class="metric__value">
-          Metric1 
-          </div>
-          <div class="metric__label">
-            MetricLabel1
-          </div>
-        <div class="metric">
-          <div class="metric__value">
-          Metric2 
-          </div>
-          <div class="metric__label">
-            MetricLabel2
-        <div class="metric">
-          <div class="metric__value">
-          Metric6
-          </div>
-          <div class="metric__label">
-            MetricLabel3
+        <div class="card__tags">
+          <span class="tag">B3</span>
+          <span class="tag">NASDAQ</span>
+          <span class="tag">NYSE</span>
+          <span class="tag">Quantitative</span>
         </div>
       </div>
-      
-    </section>
 
-
-
-    </article>
-  
-          <!-- Here I will add my first portfolio; VECTOR portfolio -->
-    <article class="card" style="--delay:0.1s">
-    <div class="card__accent" style="background: var(--accent-blue)"></div>
-    <div class="header">
-      <p class="card__type">Quant Strategy</p>
-      <h2 class="card__name">Vector Portfolio</h2>
-      <p class="card__description">This portfolio has a focus on quant strategies that leverage ...</p>
-
-      <div class="card__tags">
-        <span class="tag">B3</span>
-        <span class="tag">NASDAQ</span>
-        <span class="tag">NYSE</span>
-        <span class="tag">Quantitative</span>
-      </div>
-    </div>
-
-    <section class="card__section">
-      <p class="card__section-title">Use cases</p>
-      <ul>
-        <li>Automated trades</li>
-        <li>Programatic analysis</li>
-        <li>Proven track record</li>
-      </ul>
-
-    </section>
-
-    <section class="card__section">
-      <p class="card__section-title">Trade offs</p>
-      <div class="pros-cons">
-      <div>
-        <p class="pros-cons__label--pro">Strenghts</p>
-        <ul class="pros-cons__list">
-          <li>+ Item 1</li>
-          <li>+ Item 2</li>
-          <li>+ Item 3</li>
+      <section class="card__section">
+        <p class="card__section-title">Use cases</p>
+        <ul class="use-case-list">
+          <li>Automated trades</li>
+          <li>Programatic analysis</li>
+          <li>Proven track record</li>
         </ul>
-      </div>
-      <div>
-          <p class="pros-cons__label--con">Weaknesses</p>
-          <ul class="pros-cons__list">
-          <li>+ Item 1</li>
-          <li>+ Item 2</li>
-          <li>+ Item 3</li>
-          </ul>
-        </div>  
-      </div>
-      
-    </section>
+      </section>
 
-    <section class="card__section">
-      <p class="card__section-title">Typical metrics</p>
-      <div class="metrics">
-        <div class="metric">
-          <div class="metric__value">
-          Metric1 
+      <section class="card__section">
+        <p class="card__section-title">Trade offs</p>
+        <div class="pros-cons">
+          <div>
+            <p class="pros-cons__label pros-cons__label--pro">Strengths</p>
+            <ul class="pros-cons__list">
+              <li>+ Stock movements + Dividend income</li>
+              <li>+ B3 is not a fully efficient market like the US</li>
+              <li>+ No leverage or use of short selling</li>
+            </ul>
           </div>
-          <div class="metric__label">
-            MetricLabel1
+          <div>
+            <p class="pros-cons__label pros-cons__label--con">Weaknesses</p>
+            <ul class="pros-cons__list">
+              <li>- 6 month rebalancing window</li>
+              <li>- Low liquidity between windows</li>
+              <li>- Prone to market swings under irrational market structures</li>
+            </ul>
           </div>
-        <div class="metric">
-          <div class="metric__value">
-          Metric2 
+        </div>
+      </section>
+
+      <!-- Key performance and profile metrics displayed in a condensed grid -->
+      <section class="card__section">
+        <p class="card__section-title">TL;DR</p>
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric__value">Long Quant</div>
+            <div class="metric__label">Strategy</div>
           </div>
-          <div class="metric__label">
-            MetricLabel2
-        <div class="metric">
-          <div class="metric__value">
-          Metric6
+          <div class="metric">
+            <div class="metric__value">18%</div>
+            <div class="metric__label">TWR</div>
           </div>
-          <div class="metric__label">
-            MetricLabel3
+          <div class="metric">
+            <div class="metric__value">Agressive</div>
+            <div class="metric__label">Profile</div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <!-- ====== CARD 2: Legend Portfolio (Value Strategy) ====== -->
+    <article class="card" style="--delay: 0.2s">
+      <div class="card__accent" style="background: var(--accent-green)"></div>
+      <div class="card__header">
+        <p class="card__type">Intrinsic Strategy</p>
+        <h2 class="card__name">Legend Portfolio</h2>
+        <p class="card__description">This portfolio has a focus on mimicking the long-term, 
+              value-oriented investment strategy of Warren Buffett's Berkshire Hathaway. The 
+              strategy tracks his high-conviction US equity holdings as closely as possible, leveraging
+              regulatory findings to mirror his compounding machine. <br> The strategy has an average rebalancing
+              period of 3 months (following quarterly 13F filings) with a universe of stocks focused on:</p>
+
+        <div class="card__tags">
+          <span class="tag">NYSE</span>
+          <span class="tag">NASDAQ</span>
+          <span class="tag">Value</span>
+          <span class="tag">Concentrated</span>
         </div>
       </div>
-      
-    </section>
 
+      <section class="card__section">
+        <p class="card__section-title">Use cases</p>
+        <ul class="use-case-list">
+          <li>Long-term wealth compounding</li>
+          <li>Low-turnover promgrammatic tracking</li>
+          <li>Proven historical outperformance</li>
+        </ul>
+      </section>
 
+      <section class="card__section">
+        <p class="card__section-title">Trade offs</p>
+        <div class="pros-cons">
+          <div>
+            <p class="pros-cons__label pros-cons__label--pro">Strengths</p>
+            <ul class="pros-cons__list">
+              <li>+ High-quality businesses with strong moats</li>
+              <li>+ Massive historical track record of compounding</li>
+              <li>+ Low transaction costs due to minimal turnover</li>
+            </ul>
+          </div>
+          <div>
+            <p class="pros-cons__label pros-cons__label--con">Weaknesses</p>
+            <ul class="pros-cons__list">
+              <li>- 45-day regulatory lag on 13F filing data </li>
+              <li>- Highly concentrated in specific sectors (e.g., Apple, Financials)</li>
+              <li>- Underperforms in highly speculative bull markets</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
+      <section class="card__section">
+        <p class="card__section-title">TL;DR</p>
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric__value">Long Value</div>
+            <div class="metric__label">Strategy</div>
+          </div>
+          <div class="metric">
+            <div class="metric__value">20%</div>
+            <div class="metric__label">TWR</div>
+          </div>
+          <div class="metric">
+            <div class="metric__value">Conservative</div>
+            <div class="metric__label">Profile</div>
+          </div>
+        </div>
+      </section>
     </article>
 
-          <!-- Here I will add my first portfolio; VECTOR portfolio -->
-    <article class="card" style="--delay:0.1s">
-    <div class="card__accent" style="background: var(--accent-blue)"></div>
-    <div class="header">
-      <p class="card__type">Quant Strategy</p>
-      <h2 class="card__name">Vector Portfolio</h2>
-      <p class="card__description">This portfolio has a focus on quant strategies that leverage ...</p>
+    <!-- ====== CARD 3: Renda Portfolio (Dividend Strategy) ====== -->
+    <article class="card" style="--delay: 0.3s">
+      <div class="card__accent" style="background: var(--accent-purple)"></div>
+      <div class="card__header">
+        <p class="card__type">Dividend Strategy</p>
+        <h2 class="card__name">Renda Portfolio</h2>
+        <p class="card__description">This portfolio has a focus on the dividend-pioneering philosophy of Luiz Barsi,
+                targeting intrinsically valuable, cash-generating companies in the Brazilian stock market. 
+                The strategy programmatically selects fundamentally sound enterprises trading at attractive margins
+                of safety that yield sustainable, high payouts.<br> The strategy has an average rebalancing period
+                of 6 to 12 months with a universe of stocks focused on:</p>
 
-      <div class="card__tags">
-        <span class="tag">B3</span>
-        <span class="tag">NASDAQ</span>
-        <span class="tag">NYSE</span>
-        <span class="tag">Quantitative</span>
-      </div>
-    </div>
-
-    <section class="card__section">
-      <p class="card__section-title">Use cases</p>
-      <ul>
-        <li>Automated trades</li>
-        <li>Programatic analysis</li>
-        <li>Proven track record</li>
-      </ul>
-
-    </section>
-
-    <section class="card__section">
-      <p class="card__section-title">Trade offs</p>
-      <div class="pros-cons">
-      <div>
-        <p class="pros-cons__label--pro">Strenghts</p>
-        <ul class="pros-cons__list">
-          <li>+ Item 1</li>
-          <li>+ Item 2</li>
-          <li>+ Item 3</li>
-        </ul>
-      </div>
-      <div>
-          <p class="pros-cons__label--con">Weaknesses</p>
-          <ul class="pros-cons__list">
-          <li>+ Item 1</li>
-          <li>+ Item 2</li>
-          <li>+ Item 3</li>
-          </ul>
-        </div>  
-      </div>
-      
-    </section>
-
-    <section class="card__section">
-      <p class="card__section-title">Typical metrics</p>
-      <div class="metrics">
-        <div class="metric">
-          <div class="metric__value">
-          Metric1 
-          </div>
-          <div class="metric__label">
-            MetricLabel1
-          </div>
-        <div class="metric">
-          <div class="metric__value">
-          Metric2 
-          </div>
-          <div class="metric__label">
-            MetricLabel2
-        <div class="metric">
-          <div class="metric__value">
-          Metric6
-          </div>
-          <div class="metric__label">
-            MetricLabel3
+        <div class="card__tags">
+          <span class="tag">B3</span>
+          <span class="tag">Dividends</span>
+          <span class="tag">Value</span>
+          <span class="tag">MoS</span>
         </div>
       </div>
-      
-    </section>
 
+      <section class="card__section">
+        <p class="card__section-title">Use cases</p>
+        <ul class="use-case-list">
+          <li>Programmatic passive income generation</li>
+          <li>Fundamental equity screening</li>
+          <li>Defensive capital preservation</li>
+        </ul>
+      </section>
 
+      <section class="card__section">
+        <p class="card__section-title">Trade offs</p>
+        <div class="pros-cons">
+          <div>
+            <p class="pros-cons__label pros-cons__label--pro">Strengths</p>
+            <ul class="pros-cons__list">
+              <li>+ Consistent cash flow via optimized dividend yield</li>
+              <li>+ High margin of safety from strictly buying underpriced assets</li>
+              <li>+ Tailored to capitalize on the unique tax-exempt dividend structure in Brazil</li>
+            </ul>
+          </div>
+          <div>
+            <p class="pros-cons__label pros-cons__label--con">Weaknesses</p>
+            <ul class="pros-cons__list">
+              <li>- High concentration in cyclical sectors (Utilities, Financials, Commodities)</li>
+              <li>- Sensitive to local regulatory, fiscal, and macroeconomic policy shifts</li>
+              <li>- Lower capital appreciation potential during rapid growth market cycles</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
+      <section class="card__section">
+        <p class="card__section-title">TL;DR</p>
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric__value">Dividend Value</div>
+            <div class="metric__label">Strategy</div>
+          </div>
+          <div class="metric">
+            <div class="metric__value">10%</div>
+            <div class="metric__label">TWR</div>
+          </div>
+          <div class="metric">
+            <div class="metric__value">Moderate</div>
+            <div class="metric__label">Profile</div>
+          </div>
+        </div>
+      </section>
     </article>
-
 
   </div>
-    
-  </div> 
+ </div>
 </main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Built by Sergio Barrientos - 2026 ·
+      <a href="https://github.com/sergiobk201" target="_blank" rel="noopener">Github</a>
+    </p>
+    <p><a href="https://barkel-portfolio.streamlit.app/">Check Live Portfolio</a></p>
+  </div>
+</footer>
 </body>
 </html>
