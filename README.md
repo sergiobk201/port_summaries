@@ -12,8 +12,7 @@
 </p>
 
 <p align="center">
-  <!-- TODO: add hero image at assets/images/hero.png -->
-  <img src="assets/images.hero.png" alt="Port Summaries Preview" width="720">
+  <img src="assets/images/hero.png" alt="Port Summaries Preview" width="720">
 </p>
 
 ---
@@ -103,10 +102,6 @@ The project follows a **Single-Page Application (SPA)** layout without the overh
 ## 🤝 Contributing
 
 This is a personal learning project. While contributions aren't actively sought, feel free to fork the repo and experiment with your own portfolio strategies.
-
-## 📄 License
-
-[MIT](LICENSE) © 2026 Sergio Barrientos
 
 ## 🙏 Acknowledgments
 
