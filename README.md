@@ -33,7 +33,17 @@ Built as a learning project focused on high-quality frontend fundamentals, it em
 
 ## 📸 Demo
 
+> 🌐 **Live Site:** [https://dr0g52n08v4k8.cloudfront.net](https://dr0g52n08v4k8.cloudfront.net)
+
 > 🔗 **Live Performance Tracking:** [Barkel Portfolio Dashboard](https://barkel-portfolio.streamlit.app/)
+
+## ☁️ Deployment
+
+The site is deployed on **AWS** following security best practices:
+
+- **S3** — Static frontend files hosted in a private S3 bucket (no public access).
+- **CloudFront** — CDN distribution serves the site globally with HTTPS and edge caching.
+- **IAM** — A dedicated IAM user with least-privilege permissions handles all deployment operations, keeping credentials scoped and auditable.
 
 ## 🏁 Quick Start
 
@@ -92,10 +102,11 @@ The project follows a **Single-Page Application (SPA)** layout without the overh
 - [x] Implement global CSS variables.
 - [x] Create responsive Grid layout.
 - [x] Add interactive hover effects.
-- [ ] Host the gallery on GitHub Pages or Vercel.
+- [x] Deploy to AWS (S3 + CloudFront + IAM).
 
 ## 📝 Changelog
 
+- **2026-05-22** — Deployed to AWS: S3 bucket + CloudFront CDN + dedicated IAM user.
 - **2026-05-17** — Completed full implementation of all strategy cards and responsive layout.
 - **2026-05-01** — Project initialization and semantic structural planning.
 
